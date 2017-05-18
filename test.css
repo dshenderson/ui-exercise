@@ -1,0 +1,100 @@
+/* A few borrowed styles from Normalize.css
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+    line-height: 1.15; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+    margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+aside,
+footer,
+header,
+main,
+nav {
+    display: block;
+}
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+    background-color: transparent; /* 1 */
+    -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+
+/**
+ * border-box everything
+ */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* Test-specific styles
+   ========================================================================== */
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #292929;
+}
+header {
+    width: 100%;
+    padding: 0 1rem 0.5rem 1rem;
+}
+nav {
+    text-align: right;
+}
+nav a {
+    display: inline-block;
+    margin-left: 2em;
+    padding-top: 1.5rem;
+    border-top: 0.5rem solid transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+nav a:hover,
+nav a:focus {
+    border-color: #cac2bb;
+}
+h1 {
+    text-align: center;
+}
+main:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.content {
+    float: left;
+    width: 70%;
+    padding: 1rem;
+}
+aside {
+    float: right;
+    width: 30%;
+    padding: 0.5rem 1rem;
+}
+footer {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #1a1a1a;
+    color: #b2b2b2;
+}
