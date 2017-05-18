@@ -54,6 +54,10 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     color: #292929;
 }
+
+/**
+ * header styles
+ */
 header {
     width: 100%;
     padding: 0 1rem 0.5rem 1rem;
@@ -77,24 +81,90 @@ nav a:focus {
 h1 {
     text-align: center;
 }
+
+/**
+ * main content styles
+ */
+
+main {
+    position: relative;
+}
 main:after {
     content: '';
     display: table;
     clear: both;
+}
+aside {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    bottom: 0.5rem;
+    width: 30%;
+    padding: 0 1rem;
+    border-left: 1px solid #c0c0c0;
 }
 .content {
     float: left;
     width: 70%;
     padding: 1rem;
 }
-aside {
-    float: right;
-    width: 30%;
-    padding: 0.5rem 1rem;
+.content ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
+.content li {
+    width: 33.3333%;
+    padding: 0 0.8em;
+    margin-bottom: 1.6em;
+}
+.content li img {
+    max-width: 100%;
+}
+.content li h2 {
+    margin: 0.5em 0;
+    font-weight: 300;
+}
+.content li p {
+    margin: 0;
+    color: #777;
+    line-height: 1.6;
+}
+
+/**
+ * footer styles
+ */
 footer {
     width: 100%;
     padding: 0.5rem 1rem;
     background-color: #1a1a1a;
     color: #b2b2b2;
+}
+
+/**
+ * responsive styles
+ */
+@media (max-width: 620px) {
+    .content {
+        float: none;
+        width: 100%;
+    }
+    aside {
+        position: static;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border: none;
+    }
+}
+@media (max-width: 500px) {
+    .content li {
+        width: 50%;
+    }
+}
+@media (max-width: 340px) {
+    .content li {
+        width: 100%;
+    }
 }
