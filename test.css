@@ -51,6 +51,7 @@ a {
    ========================================================================== */
 
 body {
+    overflow-x: hidden;
     font-family: Helvetica, Arial, sans-serif;
     color: #292929;
 }
@@ -159,6 +160,9 @@ footer {
     }
 }
 @media (max-width: 500px) {
+    nav a {
+        margin-left: 0.85em;
+    }
     .content li {
         width: 50%;
     }
